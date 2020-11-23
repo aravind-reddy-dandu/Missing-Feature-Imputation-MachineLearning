@@ -2,6 +2,8 @@ import numpy as np
 import pandas as pd
 
 df = pd.read_csv('D:\\Study\\ML\\Final_Project\\dataset-har-PUC-Rio-ugulino\\Full_Data.csv', delimiter=';')
+df['how_tall_in_meters'] = df['how_tall_in_meters'].apply(lambda x: int(x.replace(',', '')))
+df['body_mass_index'] = df['body_mass_index'].apply(lambda x: float(x.replace(',', '.')))
 array = df.to_numpy()
 np.random.shuffle(array)
 train_data = array[:int(len(array)*0.8)]
