@@ -53,11 +53,11 @@ class LinearRegression:
 
 dataset = pd.read_csv('D:\Study\ML\Final_Project\Sources\Datasets\Train_data.csv')
 test_data = pd.read_csv('D:\Study\ML\Final_Project\Sources\Datasets\Test_data.csv')
-test_x = test_data.iloc[:, -3:]
-test_y = test_data.iloc[:, -5]
+test_x = test_data.iloc[:, :-5].drop(['weight'], axis=1)
+test_y = test_data.iloc[:, 2]
 print(test_x, test_y, dataset)
-X_train = dataset.iloc[:, -3:]
-y_train = dataset.iloc[:, -5]
+X_train = dataset.iloc[:, :-5].drop(['weight'], axis=1)
+y_train = dataset.iloc[:, 2]
 regressor = LinearRegression(X_train, np.asarray(y_train), learning_rate=0.1, tot_iterations=1000).fit()
 print(regressor.get_error())
 print(regressor.get_error(test_x, test_y))
