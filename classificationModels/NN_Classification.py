@@ -154,17 +154,17 @@ def rgb2gray(rgb):
 # plt.imshow(right_actual / 255)
 # plt.show()
 
-dataset = pd.read_csv('D:\Study\ML\Final_Project\Sources\Datasets\Train_data.csv')
-test_data = pd.read_csv('D:\Study\ML\Final_Project\Sources\Datasets\Test_data.csv')
-test_x = test_data.iloc[:, 1]
-test_y = test_data.iloc[:, 3]
+dataset = pd.read_csv('D:\\Study\\ML\\Final_Project\\Sources\\Datasets\\Train_data.csv')
+test_data = pd.read_csv('D:\\Study\\ML\\Final_Project\\Sources\\Datasets\\Test_data.csv')
+test_x = test_data.iloc[:, :-5].drop(['x1'], axis=1)
+test_y = test_data.iloc[:, 4]
 print(test_x, test_y, dataset)
-X_train = dataset.iloc[:, 1]
-y_train = dataset.iloc[:, 3]
+X_train = dataset.iloc[:, :-5].drop(['x1'], axis=1)
+y_train = dataset.iloc[:, 4]
 
-X_train = np.array(X_train)[:, np.newaxis]
+X_train = np.array(X_train)
 y_train = np.array(y_train)
-layer_sizes = [X_train.shape[1], 2, 2, 1]  # set layer sizes, do not change the size of the first and last layer
+layer_sizes = [X_train.shape[1], 20, 20, 1]  # set layer sizes, do not change the size of the first and last layer
 num_iters = 50  # set number of iterations over the training set(also known as epochs in batch gradient descent
 # context)
 learning_rate = 0.03  # set learning rate for gradient descent

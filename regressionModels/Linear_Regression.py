@@ -22,9 +22,11 @@ class LinearRegression:
         return X_matrix
 
     def fit(self):
-        for _ in range(self.iterations):
+        for i in range(self.iterations):
             d = self.X.T @ (self.X @ self.weights - self.Y)
             self.weights = self.weights - (self.learning_rate / self.num_samples) * d
+            if i != 0 and i % 50 == 0:
+                print('Scaled training error after ', i, ' iterations is ', 1 - self.get_error())
 
         return self
 
@@ -53,12 +55,12 @@ class LinearRegression:
 
 dataset = pd.read_csv('D:\Study\ML\Final_Project\Sources\Datasets\Train_data.csv')
 test_data = pd.read_csv('D:\Study\ML\Final_Project\Sources\Datasets\Test_data.csv')
-test_x = test_data.iloc[:, :-5].drop(['weight'], axis=1)
-test_y = test_data.iloc[:, 2]
-print(test_x, test_y, dataset)
-X_train = dataset.iloc[:, :-5].drop(['weight'], axis=1)
-y_train = dataset.iloc[:, 2]
-regressor = LinearRegression(X_train, np.asarray(y_train), learning_rate=0.1, tot_iterations=1000).fit()
+test_x = test_data.iloc[:, :-5].drop(['x2'], axis=1)
+test_y = test_data.iloc[:, 7]
+# print(test_x, test_y, dataset)
+X_train = dataset.iloc[:, :-5].drop(['x2'], axis=1)
+y_train = dataset.iloc[:, 7]
+regressor = LinearRegression(X_train, np.asarray(y_train), learning_rate=0.01, tot_iterations=1000).fit()
 print(regressor.get_error())
 print(regressor.get_error(test_x, test_y))
 y_pred = regressor.predict(test_x)
@@ -68,6 +70,7 @@ y_pred = regressor.predict(test_x)
 #                                 index=False)
 actual_values = test_y.to_numpy()
 success = 0
+print(y_pred)
 # for i, pred in enumerate(y_pred):
 #     actual_class = None
 #     for index, val in enumerate(actual_values[i]):
