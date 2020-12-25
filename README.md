@@ -14,7 +14,7 @@ Apply different machine learning models learnt in the Class CS-536 Machine Learn
 3. Compare the Actual Values of the predicted values and calculate the MSE between to understand Accuracy.
 
 # Psuedocode for Multi-Feature imputation using Neural Network
-- We are using a Deep Neural Network which learns to impute all the features from X1 through Z4 (accelerometer readings).
+- We are using a Deep Neural Network which learns to impute all the features from X1 through Z4 (accelerometer readings in our dataset).
 - We are training the Neural Network by passing X1 through Z4 (say, m samples) with few feature values being missed and the missed values are filled as mean of the column as the input.
 - One of the main reason to fill in mean values for missing values in the input stage for NN is to make it build a relation between the true value and mean value. - We tried an experiment with zero as the replace value for missing data but as it would be same for every missing value, it is just tough for the neural net to 6. make a relation between all zeros and individual true values and as expected the results were not that great.
 - The results are pretty fascinating when we used mean as the replace value.
