@@ -5,6 +5,9 @@
 - We have also built a Streamlit Web Application that can impute missing values given the datapoint with missing values. One of the main reasons, we built this applicaiton with a thought that true power of any technology is said to be utilized when an end-user can successfully use it as a black-box.
 - Below we sub-divided the puedoCode for regression model and Multi-Feature imputation model using a Deep Neural Network.
 
+# Contributions:
+@aravind-reddy-dandu and @Harsha-Musunuri worked on the entire repository. At the time of this document, both are MSCS graduate students
+
 # Core Logic
 Apply different machine learning models learnt in the Class CS-536 Machine Learning at Rutgers University to impute the missing values of the given dataset
 
