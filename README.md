@@ -31,11 +31,22 @@ This web application uses Regression and Neural networks to visualize and impute
 ## Regression error plots
 
 We have given text boxes to input different parameters of regression. Another text box is to select the feature to be imputed. Changing each parameters, we can find the best set of parameters for each feature. Below is the interface for this.
-![Regression parameters](ReadMeImages/Reg_Params.png)
-![Regression parameters](ReadMeImages/Reg_Plot.png)
+<p align="center">
+    <img src="ReadMeImages/Reg_Params.png">
+ </p> 
+ <p align="center">
+  <img src="ReadMeImages/Reg_Plot.png">
+  </p>
+  
 ## Single feature imputation using Regression
-![Regression parameters](ReadMeImages/one_prediction.png)
+
+<p align="center">
+  <img src="ReadMeImages/one_prediction.png">
+</p>
+Here we impute one value when all the other are given. This is done by regression.
 
 ## Multi-feature imputation- Neural networks
-![Regression parameters](ReadMeImages/Multi_Imputation.png)
-
+<p align="center">
+  <img src="ReadMeImages/Multi_Imputation.png">
+</p>
+As discussed above, multiple-features can be imputed here. This is using neural networks.
