@@ -24,3 +24,16 @@ Apply different machine learning models learnt in the Class CS-536 Machine Learn
 - The results are pretty fascinating when we used mean as the replace value.
 - The cost function is between the True Values of X1 through Z4 and the True values , mean of X1 through Z4 as explained above. For instance, Let's say we have 3 features a,b,c and for one sample if the feature 'a' has missing value, we fill that the a<sub>mean</sub> and compute <strong>Cost</strong> ((a<sub>mean</sub>,b,c),(a<sub>true</sub>,b,c).
 - We train the NN to minimise the cost.
+
+# StreamLit Application
+
+This web application uses Regression and Neural networks to visualize and impute missing values and the training process.
+## Regression error plots
+
+We have given text boxes to input different parameters of regression. Another text box is to select the feature to be imputed. Changing each parameters, we can find the best set of parameters for each feature. Below is the interface for this.
+
+## Single feature imputation using Regression
+
+## Multi-feature imputation- Neural networks
+
+
