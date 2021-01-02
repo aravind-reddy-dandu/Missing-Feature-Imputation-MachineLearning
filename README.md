@@ -1,7 +1,7 @@
 # Missing Feature Imputation through Machine Learning
 - Many real-world datasets contains missing values for various reasons which often encoded as NaNs, blanks or any other placeholders. Training a model with a dataset that has a lot of missing values can drastically impact the machine learning model’s quality.
 - In this project, we handle this problem statement using different Regression Models from scratch. 
-- We have also designed a Deep Neural Network that can imputation all the missing values of a sample datapoint at once, with a fascinating score of 0.15 where 0 is the best and 1 is the worst.
+- We have also designed a Deep Neural Network that can impute all the missing values of a sample datapoint at once, with a fascinating score of 0.15 where 0 is the best and 1 is the worst.
 - We have also built a Streamlit Web Application that can impute missing values given the datapoint with missing values. One of the main reasons, we built this applicaiton with a thought that true power of any technology is said to be utilized when an end-user can successfully use it as a black-box.
 - Below we sub-divided the puedoCode for regression model and Multi-Feature imputation model using a Deep Neural Network.
 ![Architecture Pipeline](ReadMeImages/BasicIdea.png)
