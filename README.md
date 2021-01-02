@@ -13,8 +13,8 @@
 Apply different machine learning models learnt in the Class CS-536 Machine Learning at Rutgers University to impute the missing values of the given dataset
 
 # Psuedocode for Regression Models
-1. Train regression models with Missing Value Columns as Traget Columns
-2. Use the trained models to imput the Missing Values using the remaining features of the TestData
+1. Train regression models with Missing Value Columns as Target Columns
+2. Use the trained models to impute the Missing Values using the remaining features of the TestData
 3. Compare the Actual Values of the predicted values and calculate the MSE between to understand Accuracy.
 
 # Psuedocode for Multi-Feature imputation using Neural Network
